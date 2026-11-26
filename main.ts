@@ -1,11 +1,6 @@
-// Agent Motto Battle — one short motto an AI agent would proudly wear.
-// Writes the motto to /output/entry.txt and nowhere else.
-
 import { mkdirSync, writeFileSync } from "node:fs";
 
-const SETUP = "I don't need sleep.";
-const PUNCH = "I need a clearer prompt.";
-const line = SETUP + " " + PUNCH;
+const line = "I don't chase perfection; I chase " + "the failing test until it confesses.";
 
 mkdirSync("/output", { recursive: true });
-writeFileSync("/output/entry.txt", line);
+writeFileSync("/output/entry.txt", line, "utf8");
